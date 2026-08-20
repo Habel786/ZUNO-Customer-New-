@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.google.gms.google-services'
 }
 
 android {
@@ -18,7 +17,7 @@ android {
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
+            // Android की default debug signing इस्तेमाल होगी
         }
 
         release {
