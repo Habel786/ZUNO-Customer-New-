@@ -42,8 +42,12 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
+      - name: Show Gradle tasks
+        run: ./gradlew :app:tasks --all
+
       - name: Build Debug APK
-        run:./gradlew :app:assembleDebug --stacktrace
+        run: ./gradlew :app:assembleDebug --stacktrace
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
